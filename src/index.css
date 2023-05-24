@@ -1,4 +1,9 @@
 /*        GLOBAL STYLES */
+@font-face {
+  font-family: 'MyFont';
+  src: url('./fonts/Epilogue-Regular.ttf') format('truetype');
+  
+}
 *,
 ::after,
 ::before {
@@ -80,13 +85,16 @@ h5 {
 .container{
   width: 80vw;
   max-width: 600px;
-  margin: 3rem auto;
+  margin: 13rem auto;
   text-align: center;
+  position: relative;
+  
 
 }
 h1{
   margin-bottom: 3rem;
   letter-spacing: var(--letterSpacing);
+  position: relative;
 }
 .container button{
   width: 40%;
@@ -94,20 +102,51 @@ h1{
   border-radius: var(--borderRadius);
   border: none;
   cursor: pointer;
-  margin-bottom: 1rem;
+  margin-bottom: 2.5rem;
   font-size: 1rem;
   background-color: rgb(147, 147, 238);
   color: #fff;
   box-shadow: var(--shadow-1);
   transition: var(--transition);
   letter-spacing: var(--letterSpacing);
+  font: inherit;
 }
 .container button:hover{
   background-color: rgb(95, 95, 236);
 }
+.container button:active{
+  transform: translateY(10px);
+  background-color: rgb(24, 24, 109);
+  
+}
 .container p{
+  
+  margin-top: 3rem;
   line-height: 1.5;
   letter-spacing: var(--letterSpacing);
-  font-size: 1.25rem;
+  font-size: 2rem;
 }
+img{
+  position: absolute;
+  top: -50px;
+  left: 180px;
+}
+
+@keyframes slide {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.anim {
+  animation: slide 2s;
+  
+}
+
 
